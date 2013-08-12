@@ -1,4 +1,5 @@
 Conversession::Application.routes.draw do
+  get "pages/show"
   # Omniauth
   #get 'channel.html' => 'pages#facebook_channel'
   get '/auth/:provider/callback' => 'authentications#create'

@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="span8" style="background: #FFF; height: 400px">
+        <div class="hero-unit" style="border:2px solid #EEE;background-color:#FFF">
+            <h1>Hello!</h1>
+            <p>Conversession allows you to improve your language skills by talking to other people around the world.<p />
+            <p>It's easy, simple, and free! Let's try?</p><br />
+            <p><%= link_to "Start chatting!", search_conversations_path, {:class => "btn btn-primary btn-large"}  %></p>
+            <!--<  a class="btn btn-primary btn-large"> Start chatting! </a></p> -->
+        </div> 
+    
+    </div>
+	<div class="span4" style="background: #EEE; height: 385px">
+        <div class="row">
+            <div class="span3"><br />
+                <h3 style="color: #444; margin-left:25px">Already a member?</h3>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="span4" style="text-align:center">
+                <a href="/auth/facebook" id="facebook-button" class="facebook-button">Login with Facebook</a>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="span4" style="text-align:center">
+                <p>or</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span4" style="text-align:center">
+                <p>Sign in using email</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span4" align="center">
+                <form>
+                    <input type="text" id="inputEmail" style="margin-bottom:0px;" placeholder="Email">
+                    <button type="submit" class="btn">Sign in</button>
+                </form>
+
+        </div>
+    </div>
+</div>

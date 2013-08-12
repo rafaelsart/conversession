@@ -1,0 +1,21 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#facebook-button {
+    background: url("bg-facebook-button.png") no-repeat center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    height: 43px;
+    line-height: 42px;
+    padding-left: 40px;
+    text-align: center;
+    width: 177px;
+}
+
+a {
+    text-decoration:none;
+}

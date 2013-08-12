@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  host_id: 1
+  guest_id: 1
+  ended_at: 2013-08-02 12:48:08
+  ended_by: 1
+  language: MyString
+  status: MyString
+  opentok_session_id: MyString
+  opentok_token: MyString
+
+two:
+  host_id: 1
+  guest_id: 1
+  ended_at: 2013-08-02 12:48:08
+  ended_by: 1
+  language: MyString
+  status: MyString
+  opentok_session_id: MyString
+  opentok_token: MyString

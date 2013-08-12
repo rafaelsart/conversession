@@ -1,0 +1,35 @@
+<% content_for :head do %>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <script src="http://static.opentok.com/webrtc/v2.0/js/TB.min.js" type="text/javascript" charset="utf-8"></script>
+    <link href="/css/demos.css" type="text/css" rel="stylesheet" >
+
+    <script type="text/javascript" charset="utf-8">
+        TB.addEventListener("exception", exceptionHandler);
+        var session = TB.initSession("<%= @conversation.opentok_session_id %>");
+        session.addEventListener("sessionConnected", sessionConnectedHandler);
+        session.addEventListener("streamCreated", streamCreatedHandler);
+        session.connect("<%= OPENTOK[:api_key] %>", "<%= @conversation.opentok_token %>");
+
+        function sessionConnectedHandler(event) {
+             subscribeToStreams(event.streams);
+             session.publish();
+        }
+        
+        function streamCreatedHandler(event) {
+            subscribeToStreams(event.streams);
+        }
+        
+        function subscribeToStreams(streams) {
+            for (var i = 0; i < streams.length; i++) {
+                var stream = streams[i];
+                if (stream.connection.connectionId != session.connection.connectionId) {
+                    session.subscribe(stream);
+                }
+            }
+        }
+        
+        function exceptionHandler(event) {
+            alert("Exception: " + event.code + "::" + event.message);
+        }
+    </script>
+<% end %>
